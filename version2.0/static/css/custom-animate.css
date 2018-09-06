@@ -1,0 +1,16 @@
+@keyframes ligh2dark{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: .3;
+  }
+}
+@keyframes runRotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}
