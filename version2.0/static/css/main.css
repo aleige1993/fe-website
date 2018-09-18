@@ -7,9 +7,9 @@
   font-size: 14px;
 }
 body{
-  overflow-x: hidden;
+  overflow-x: hidden!important;
 }
-html,body{height:100%;overflow:hidden}
+html,body{height:100%;overflow:hidden!important;}
 a{
   text-decoration: none;
 }
