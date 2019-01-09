@@ -6,13 +6,13 @@ var logger = require('morgan');
 var handlebars  = require('express-handlebars');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.engine('hbs', handlebars({
+  partialsDir: 'views/common',
   layoutsDir: 'views',
   defaultLayout: 'layout',
   extname: '.hbs'
@@ -26,7 +26,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
