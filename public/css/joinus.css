@@ -1,0 +1,178 @@
+.content {
+  margin: 0 auto;
+}
+
+.content .container {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+a.supply-join {
+  text-align: center;
+  display: inline-block;
+  width: 132px;
+  line-height: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #34AAE6;
+  font-size: 18px;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, .8);
+}
+
+.section1 {
+  width: 100%;
+  background-image: url('http://www.ulandian.com/imgs/supplyBanner.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.section1 .container {
+  box-sizing: border-box;
+  padding: 80px 60px 10px 100px;
+}
+
+.section1 .text {
+  color: #fff;
+}
+
+.section1 h1 {
+  font-size: 46px;
+}
+
+.section1 p {
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.section2 {
+  padding-bottom: 30px;
+}
+
+.section2 dl {
+  padding-top: 30px;
+  padding-right: 80px;
+}
+
+.section2 dt {
+  font-size: 20px;
+  color: #009eff;
+  padding: 30px 0 20px 0;
+}
+
+.section2 dd {
+  font-size: 14px;
+  color: #828282;
+  line-height: 30px;
+}
+
+.section2 dl i {
+  font-style: normal;
+  color: #009eff;
+}
+
+.section3 {
+  /*background-color: #f6f6f6;*/
+  /*padding-bottom: 50px;*/
+}
+
+.section3 ul {
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.section3 li {
+  float: left;
+  width: 20%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section3 li .wraper {
+  box-sizing: border-box;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.section3 li h4 {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #595757;
+}
+
+.section3 li img {
+  width: 100%;
+}
+
+.section3 li p {
+  font-size: 12px;
+  color: #827f7f;
+  font-weight: bold;
+}
+
+.section4 {
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+
+.section4 ul {
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.section4 li {
+  float: left;
+  width: 25%;
+}
+
+.section4 .wraper {
+  margin: 5px;
+  position: relative;
+}
+
+.section4 .wraper img {
+  width: 100%;
+  min-height: 100px;
+  background-color: #ccc;
+}
+
+.section4 .text {
+  display: none;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+
+.section4 .text h3 {
+  font-size: 20px;
+  letter-spacing: 4px;
+  padding-top: 30px;
+  cursor: default;
+}
+
+.section4 .text p {
+  line-height: 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: default;
+}
+
+.section5 {
+  /*background-color: #f6f6f6;*/
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+.section5 img {
+  width: 90%;
+  padding-bottom: 20px;
+}

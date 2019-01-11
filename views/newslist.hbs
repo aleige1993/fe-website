@@ -1,0 +1,51 @@
+
+<link rel="stylesheet" href="/css/news.css"/>
+
+<!-- Swiper -->
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="https://img.alicdn.com/tfs/TB1R9Ius1uSBuNjy1XcXXcYjFXa-3840-900.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="https://img.alicdn.com/tfs/TB1R9Ius1uSBuNjy1XcXXcYjFXa-3840-900.jpg" alt=""></div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<div class="news-list-box clearfix">
+  <ul id="newsList" >
+
+  </ul>
+</div>
+
+<script>
+
+  function loadNewsList() {
+    $.post('/api/headline/headlineList', {
+      "columnName": "头条",
+      "terminal": 2,
+      "appType": 1,
+      "isUsed": 1,
+//      "currentPage": 1,
+//      "pageSize": 15
+    }, function (res) {
+      if (res.success) {
+        res.body.rows.map(item => {
+          $(`<li >
+            <a href="/newsdetail?id=${item.articleId}">
+              <div class="news-img"><img src="${item.coverPhotoUrl}" alt=""></div>
+              <p class="news-brief ch-font2 font-clamp2"><span>${item.title}</span></p>
+              <p class="date-time ch-font2">${item.gmtCreate}</p>
+            </a>
+          </li>`).appendTo($('#newsList'))
+        })
+      }
+    });
+  }
+
+  loadNewsList();
+
+</script>
+

@@ -6241,7 +6241,7 @@ body, html {
   display: inline-block;
   height: 40px;
   line-height: 40px;
-  padding: 0 25px;
+  padding: 0 10px;
 }
 .common-header .menu .next-balloon {
   top: 40px;

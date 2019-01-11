@@ -1,17 +1,17 @@
 
-<div class="intro-banner-wrap"
-     style="width: 100%; height: 450px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-  <img class="intro-banner-img" src="https://img.alicdn.com/tfs/TB1R9Ius1uSBuNjy1XcXXcYjFXa-3840-900.jpg" alt=""
-       style="position: absolute; top: 0px; left: 50%; display: block; width: 1920px; height: 100%; transform: translateX(-50%); z-index: 10;">
-  <div class="intro-banner-img-mask"
-       style="position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; background: rgb(0, 0, 0); opacity: 0.45; z-index: 15;"></div>
-  <div class="intro-banner-text"
-       style="position: relative; z-index: 99; width: 1200px; color: rgb(255, 255, 255);"><h2
-    class="intro-banner-title" style="font-weight: 400; font-size: 50px; line-height: 70px;">智慧社区，未来生活</h2>
-    <p class="intro-banner-subtitle"
-       style="margin-top: 8px; margin-bottom: 48px; max-width: 768px; font-size: 16px; line-height: 25px;">
-      输出支付，账户体系，信用金融，电商，采购，文化公益和大数据等能力和资源，助力社区物业通过提升信息化、智能化水平，改善物业管理水平和服务品质，推动建设便利舒适、安全和谐的智慧社区</p></div>
+<!-- Swiper -->
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="https://img.alicdn.com/tfs/TB1R9Ius1uSBuNjy1XcXXcYjFXa-3840-900.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="https://img.alicdn.com/tfs/TB1R9Ius1uSBuNjy1XcXXcYjFXa-3840-900.jpg" alt=""></div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </div>
+
 
 <div class="hy-ability"
      style="font-family: &quot;Microsoft YaHei&quot;; height: 223px; text-align: center; background: rgb(255, 255, 255);">
@@ -234,11 +234,8 @@
                                                                                       src="https://gw.alipayobjects.com/zos/rmsportal/cONkAwDeKdlzkcgchJLT.png"></a>
 </div>
 
-
 <script>
-  $(function () {
-    $('.hy-friends-item').click(function () {
-      $(this).addClass('selected').siblings().removeClass('selected');
-    })
+  $('.hy-friends-item').mouseover(function () {
+    $(this).addClass('selected').siblings().removeClass('selected');
   })
 </script>
