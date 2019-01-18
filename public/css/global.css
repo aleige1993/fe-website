@@ -468,7 +468,7 @@ textarea {
 }
 
 #dialog .w130 {
-  width: 120px !important;
+  width: 130px !important;
 }
 
 #dialog .w624 {
@@ -519,9 +519,9 @@ textarea {
 }
 
 #dialog-con.supply {
-  width: 800px;
-  height: 500px;
-  margin-left: -400px;
+  width: 600px;
+  height: 360px;
+  margin-left: -300px;
   margin-top: -250px;
 }
 
@@ -534,6 +534,7 @@ textarea {
 
 #dialog-con .title {
   position: relative;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -590,13 +591,13 @@ textarea {
 #dialog-con ul {
 }
 
-#dialog-con input[type="text"] {
-  width: 140px;
+#dialog-con input[type="text"], #dialog-con select {
+  width: 130px;
   height: 26px;
   border: 1px solid #c6c6c6;
   border-radius: 4px;
-  margin-left: 16px;
-  margin-right: 16px;
+  /*margin-left: 16px;*/
+  margin-right: 5px;
   padding-left: 0.8em;
 }
 
@@ -612,21 +613,25 @@ textarea {
 }
 
 #dialog-con input[type="radio"] {
-  margin-left: 6px;
+  /*margin-left: 6px;*/
   margin-right: 6px;
 }
 
+#dialog-con .form-title {
+  display: inline-block;
+  width: 130px;
+  vertical-align: top;
+}
+
 #dialog-con label {
-  padding-right: 22px;
+  padding-right: 10px;
 }
 
 #dialog-con textarea {
-  margin-top: 10px;
-  text-indent: 1.2em;
+  display: inline-block;
   line-height: 1.5em;
   font-size: 14px;
-  letter-spacing: 0.1em;
-  width: 100%;
+  width: 410px;
   height: 80px;
   max-height: 80px;
   max-width: 100%;

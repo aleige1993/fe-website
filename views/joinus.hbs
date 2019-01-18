@@ -150,18 +150,228 @@
     </div>
   </div>
 
-  <a href="" title="" name="franchiseprocess"></a>
-  <div class="section5">
+
+  <a href="" title="" name="franchiseconditions"></a>
+  <div class="section2">
     <div class="title-wrap ">
       <div class="title">
-        <h1>加盟流程</h1>
-        <p>Franchise Process</p>
+        <h1>加盟条件</h1>
+        <p>Franchise Conditions</p>
       </div>
     </div>
     <div class="container">
-      <img src="http://www.ulandian.com/imgs/supplyE1.png" alt="">
-      <a href="" class="supply-join">立即入驻</a>
+      <div class="text">
+        <dl>
+          <dt>打造千万粉丝量的轻连锁品牌便利店</dt>
+          <dd>
+            <i>● </i>现累计签约网点逾35000家，日均流量达300万人次
+          </dd>
+          <dd>
+            <i>● </i>签约网点皆处于社区核心位置
+          </dd>
+          <dd>
+            <i>● </i>已覆盖全国超过80个主要城市
+          </dd>
+        </dl>
+      </div>
     </div>
+  </div>
+
+
+  <div id="franchiseProcess">
+    <a href="" title="" name="franchiseprocess"></a>
+    <div class="section5">
+      <div class="title-wrap ">
+        <div class="title">
+          <h1>加盟流程</h1>
+          <p>Franchise Process</p>
+        </div>
+      </div>
+      <div class="container">
+        <img src="http://www.ulandian.com/imgs/supplyE1.png" alt="">
+        <a href="javascript:" @click="merchantReg" class="supply-join">携手共创美好</a>
+      </div>
+    </div>
+    <div id="dialog">
+      <div id="dialog-con" class="supply">
+        <div class="title">
+          <!--<h1 v-text="submitForm"></h1>-->
+          <h4>携手共创美好<span @click="closeMerchantReg" class="close">✕</span></h4>
+          <hr>
+        </div>
+        <ul>
+          <li>
+            <span class="form-title">*您是：</span>
+            <label><input v-model="submitForm.merchantType" type="radio" name="merchantType" value="1">企业</label>
+            <label><input v-model="submitForm.merchantType" type="radio" name="merchantType" value="2">个人</label>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <span class="form-title">*您所在城市：</span>
+            <select @change="selectProvince" v-model="provinceIndex">
+              <option value="">请选择省</option>
+              <option v-for="(item, index) in provinceList" :value="index" v-text="item.provinceName"></option>
+            </select>
+            <select @change="selectCity" v-model="cityIndex" :disabled="provinceIndex === ''">
+              <option value="">请选择市</option>
+              <option v-for="(item, index) in cityList" :value="index" v-text="item.cityName"></option>
+            </select>
+            <select @change="selectDistrict" v-model="districtIndex"  :disabled="cityIndex === ''">
+              <option value="">请选择区</option>
+              <option v-for="(item, index) in districtList" :value="index" v-text="item.districtName"></option>
+            </select>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <span class="form-title">*联系人：</span>
+            <input maxlength="4" v-model="submitForm.contactName"  type="text" class="w130">
+            <label><input v-model="submitForm.contactSex" type="radio" name="contactSex" value="1">先生</label>
+            <label><input v-model="submitForm.contactSex" type="radio" name="contactSex" value="2">女士</label>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <span class="form-title">*联系手机号码：</span>
+            <input maxlength="11" v-model="submitForm.contactTel" type="text" class="w130">
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <span class="form-title">您最关心（选填）：</span>
+            <textarea v-model="submitForm.remark" id="consContent" name="consContent" placeholder=""></textarea>
+          </li>
+        </ul>
+        <div id="submit-con">
+          <input v-show="!loading" type="button" @click="submit" value="确认登记">
+          <input v-show="loading" type="button" @click="submit" value="提交中...">
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/vue.min.js"></script>
+
+    <script>
+      var franchiseProcessVM = new Vue({
+        el: '#franchiseProcess',
+        data() {
+          return {
+            dialogShow: false,
+            provinceList: [],
+            provinceIndex: '',
+            cityList: [],
+            cityIndex: '',
+            districtList: [],
+            districtIndex: '',
+            loading: false,
+            submitForm: {}
+          }
+        },
+        methods: {
+          closeMerchantReg() {
+            $('#dialog').hide();
+          },
+          merchantReg() {
+            this.$data.provinceIndex = '';
+            this.$data.cityIndex = '';
+            this.$data.districtIndex = '';
+            this.$data.submitForm = {
+              merchantType: '1',
+              provinceCode: '',
+              provinceName: '',
+              cityCode: '',
+              cityName: '',
+              districtCode: '',
+              districtName: '',
+              contactName: '',
+              contactSex: '1',
+              contactTel: '',
+              remark: ''
+            };
+            $('#dialog').show();
+          },
+          selectProvince() {
+            if (this.$data.provinceIndex === '') {
+              this.$data.cityIndex = '';
+              this.$data.districtIndex = '';
+              this.$data.submitForm.provinceCode = '';
+              this.$data.submitForm.provinceName = '';
+              this.$data.submitForm.cityCode = '';
+              this.$data.submitForm.cityName = '';
+              this.$data.submitForm.districtCode = '';
+              this.$data.submitForm.districtName = '';
+            } else {
+              var item = this.$data.provinceList[this.$data.provinceIndex];
+              this.$data.submitForm.provinceCode = item.provinceId;
+              this.$data.submitForm.provinceName = item.provinceName;
+              this.$data.cityList = item.cityList;
+            }
+          },
+          selectCity() {
+            if (this.$data.cityIndex === '') {
+              this.$data.districtIndex = '';
+              this.$data.submitForm.cityCode = '';
+              this.$data.submitForm.cityName = '';
+              this.$data.submitForm.districtCode = '';
+              this.$data.submitForm.districtName = '';
+            } else {
+              var item = this.$data.cityList[this.$data.cityIndex];
+              this.$data.submitForm.cityCode = item.cityId;
+              this.$data.submitForm.cityName = item.cityName;
+              this.$data.districtList = item.districtList;
+            }
+          },
+          selectDistrict() {
+            if (this.$data.districtIndex === '') {
+              this.$data.submitForm.districtCode = '';
+              this.$data.submitForm.districtName = '';
+            } else {
+              var item = this.$data.districtList[this.$data.districtIndex];
+              this.$data.submitForm.districtCode = item.districtId;
+              this.$data.submitForm.districtName = item.districtName;
+            }
+          },
+          submit() {
+            if (this.$data.submitForm.provinceCode === '' || this.$data.submitForm.cityCode === '' || this.$data.submitForm.districtCode === '') {
+              layer.msg('请选择您所在城市');
+              return false;
+            }
+            if (this.$data.submitForm.contactName === '') {
+              layer.msg('联系人不能为空');
+              return false;
+            }
+            if (this.$data.submitForm.contactTel === '') {
+              layer.msg('手机号码不能为空');
+              return false;
+            }
+            if (this.$data.submitForm.contactTel.length !== 11) {
+              layer.msg('手机号码输入错误，请重新输入');
+              return false;
+            }
+            var _this = this;
+            _this.$data.loading = true;
+            $.post('/api/merchantreg/merchantRegAdd', _this.$data.submitForm, function (res) {
+              _this.$data.loading = false;
+              if (!res.success) {
+                layer.msg('提交失败， 请稍后重试');
+              } else {
+                layer.msg('提交成功，感谢您的参与');
+                _this.closeMerchantReg();
+              }
+            });
+          }
+        },
+        mounted() {
+          axiosFormData('/openapi/common/regions', {}, function (res) {
+            if (res.success && res.success === 'true') {
+              franchiseProcessVM.provinceList = res.data;
+            }
+          });
+        }
+      })
+    </script>
+
   </div>
 
 

@@ -28,6 +28,7 @@ app.use('/', require('./routes/index'));
 // api
 app.use('/api/headline', require('./api/ScCms/CmsHeadline'));
 app.use('/api/article', require('./api/ScCms/CmsArticle'));
+app.use('/api/merchantreg', require('./api/ScCms/CmsMerchantReg'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
