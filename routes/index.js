@@ -27,5 +27,4 @@ router.get('/joinus', function (req, res, next) {
   res.render('joinus', {title: title + '招商加盟'});
 });
 
-
 module.exports = router;
