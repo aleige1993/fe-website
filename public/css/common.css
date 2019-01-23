@@ -5325,13 +5325,13 @@ a:active {
 
 .scenario-detail-list {
   position: relative;
-  width: 1240px;
-  margin: 17px auto 0;
+  width: 1120px;
+  margin: 15px auto 30px;
   text-align: left
 }
 
 .scenario-detail-list::before {
-  background: #979797
+  background: transparent;
 }
 
 .scenario-detail-list .scenario-detail-item {
@@ -5451,16 +5451,15 @@ a:active {
 .scenario-detail-list .scenario-detail-item .scenario-detail-right {
   width: 720px;
   position: absolute;
-  top: 0;
   bottom: 0;
-  left: 570px;
+  right: 0;
   overflow: hidden
 }
 
 .scenario-detail-list .scenario-detail-item .scenario-detail-right > img {
   width: 100%;
-  position: absolute;
-  bottom: 0
+  /*position: absolute;*/
+  /*bottom: 0*/
 }
 
 .scenario-download, .scenario-download * {

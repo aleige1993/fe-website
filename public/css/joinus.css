@@ -93,6 +93,7 @@ a.supply-join {
 
 .section3 li .wraper {
   box-sizing: border-box;
+  height: 310px;
   margin: 0 10px;
   padding: 20px;
   background-color: #fff;
