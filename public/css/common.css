@@ -5254,7 +5254,7 @@ a:active {
 
 .scenario-column h3 {
   font-family: Microsoft YaHei;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 40px;
   color: #999;
@@ -5268,7 +5268,7 @@ a:active {
 
 .scenario-slider .scenario-item {
   width: 112px;
-  height: 158px;
+  height: 128px;
   margin: 0 9px;
   font-size: 0;
   font-family: Microsoft YaHei;
@@ -5335,10 +5335,12 @@ a:active {
 }
 
 .scenario-detail-list .scenario-detail-item {
+  box-sizing: border-box;
   position: relative;
   display: none;
   top: 0;
   left: 0;
+  height: 660px;
   padding-top: 78px
 }
 
@@ -5363,7 +5365,7 @@ a:active {
 }
 
 .scenario-detail-list .scenario-detail-item .scenario-detail-left > p {
-  font-size: 12px;
+  font-size: 14px;
   color: #333;
   line-height: 22px;
   max-width: 434px
@@ -5461,6 +5463,33 @@ a:active {
   bottom: 0
 }
 
+.scenario-download, .scenario-download * {
+  vertical-align: bottom;
+}
+
+.scenario-download {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.scenario-download  a{
+  display: inline-block;
+  margin-right: 10px;
+  padding: 12px 56px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid #108ee9;
+  text-decoration: none;
+}
+
+.scenario-download img {
+  width: 140px;
+  height: 140px;
+}
+
 .scenario-actions {
   background: #ecf3fd;
   text-align: center;
@@ -5498,7 +5527,7 @@ a:active {
   max-width: 1920px;
   min-width: 1280px;
   margin: 0 auto;
-  height: 400px
+  height: 400px;
 }
 
 .hy-friends-list * {
@@ -5508,7 +5537,7 @@ a:active {
 
 .hy-friends-list .hy-friends-item {
   position: relative;
-  width: 12.5%;
+  width: 20%;
   height: 100%;
   float: left;
   overflow: hidden;
@@ -5583,7 +5612,7 @@ a:active {
 }
 
 .hy-friends-list .hy-friends-item.selected {
-  width: 62.5%
+  width: 60%
 }
 
 .hy-friends-list .hy-friends-item.selected::before {
@@ -6252,6 +6281,8 @@ body, html {
   top: 0;
   left: 0;
   z-index: 99;
+  height: 120px;
+  background: url("/img/header-mask.png") repeat-x;
 }
 .common-header-wrap.fixed .common-header .menu li > a {
   color: #fff;

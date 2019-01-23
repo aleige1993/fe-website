@@ -67,6 +67,9 @@
 .company-info .summary {
   box-sizing: border-box;
 }
+.company-info .summary.center {
+  text-align: center;
+}
 
 .row1 .video-box {
   position: relative;
@@ -189,7 +192,7 @@
   width: 92px;
   height: 92px;
   margin-bottom: 30px;
-  background: url(/img/about-circle.png) no-repeat center center;
+  background: url(/img/about/about-circle.png) no-repeat center center;
   background-size: 100% 100%;
   position: relative;
   text-align: center;
@@ -198,7 +201,7 @@
 }
 
 .row6 .tab .item.active {
-  background: url(/img/about-circle-active.png) no-repeat center center;
+  background: url(/img/about/about-circle-active.png) no-repeat center center;
   background-size: 100% 100%;
 }
 
@@ -300,36 +303,11 @@ text-align: center;
 
 .contact .img-box {
   width: 40px;
-  height: 32px;
+  height: 40px;
   margin-right: 26px;
 }
 
-.contact .mail .img-box {
-  background: url(http://www.ulandian.com/imgs/about-icon03.png) no-repeat;
-}
-
-.contact .phone .img-box {
-  background: url(http://www.ulandian.com/imgs/about-icon04.png) no-repeat;
-}
-
-.contact .web .img-box {
-  background: url(http://www.ulandian.com/imgs/about-icon06.png) no-repeat;
-}
-
-.contact .qq .img-box {
-  background: url(http://www.ulandian.com/imgs/about-icon02.png) no-repeat;
-}
-
-.contact .address .img-box {
-  background: url(http://www.ulandian.com/imgs/about-icon05.png) no-repeat;
-}
-
-.contact .mail-code .img-box {
-  background: url(http://www.ulandian.com/imgs/about-icon07.png) no-repeat;
-}
-
-.contact h1,
-{
+.contact h1 {
   font-size: 16px;
   line-height: 16px;
 }
