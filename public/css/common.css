@@ -117,7 +117,8 @@ button, input, optgroup, select, textarea {
 }
 
 body, html {
-  font-family: Roboto, "Helvetica Neue", Helvetica, Tahoma, Arial, FZLanTingHeiS-L-G, "PingFang SC", "Microsoft YaHei"
+  font-family: Roboto, "Helvetica Neue", Helvetica, Tahoma, Arial, FZLanTingHeiS-L-G, "PingFang SC", "Microsoft YaHei";
+  overflow-x: hidden;
 }
 
 h6, p {
@@ -5325,8 +5326,8 @@ a:active {
 
 .scenario-detail-list {
   position: relative;
-  width: 1120px;
-  margin: 15px auto 30px;
+  width: 1140px;
+  margin: 0 auto;
   text-align: left
 }
 
@@ -5340,8 +5341,9 @@ a:active {
   display: none;
   top: 0;
   left: 0;
-  height: 660px;
-  padding-top: 78px
+  height: 490px;
+  padding-top: 30px;
+  /*overflow: hidden;*/
 }
 
 .scenario-detail-list .scenario-detail-item.selected {
@@ -5350,7 +5352,7 @@ a:active {
 
 .scenario-detail-list .scenario-detail-item .scenario-detail-left {
   font-family: Microsoft YaHei;
-  padding-left: 13px;
+  /*padding-left: 13px;*/
   padding-bottom: 12px;
   width: 570px
 }
@@ -5365,10 +5367,12 @@ a:active {
 }
 
 .scenario-detail-list .scenario-detail-item .scenario-detail-left > p {
-  font-size: 14px;
+  margin-left: 32px;
+  font-size: 16px;
   color: #333;
-  line-height: 22px;
-  max-width: 434px
+  line-height: 30px;
+  max-width: 434px;
+  text-indent: 2em;
 }
 
 .scenario-detail-list .scenario-detail-item .scenario-detail-left .scenario-ability-list .ability-title {
@@ -5453,7 +5457,8 @@ a:active {
   position: absolute;
   bottom: 0;
   right: 0;
-  overflow: hidden
+  overflow: hidden;
+  text-align: right;
 }
 
 .scenario-detail-list .scenario-detail-item .scenario-detail-right > img {
@@ -5487,6 +5492,7 @@ a:active {
 .scenario-download img {
   width: 140px;
   height: 140px;
+  display: none;
 }
 
 .scenario-actions {
@@ -6275,6 +6281,9 @@ body, html {
   top: 40px;
   display: none;
 }
+.common-header .menu .next-icon {
+  margin-left: 1px;
+}
 .common-header-wrap.fixed {
   position: absolute;
   top: 0;
@@ -6284,12 +6293,13 @@ body, html {
   background: url("/img/header-mask.png") repeat-x;
 }
 .common-header-wrap.fixed .common-header .menu li > a {
+  font-size: 16px;
   color: #fff;
 }
 
 .swiper-container, .swiper-slide img{
   width: 100%;
-  height: 450px;
+  /*height: 450px;*/
 }
 .swiper-slide {
   text-align: center;

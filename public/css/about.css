@@ -103,9 +103,9 @@
 }
 
 .content .row1 .summary p {
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
-  line-height: 25px;
+  line-height: 28px;
   text-indent: 2em;
 }
 
@@ -181,7 +181,7 @@
 }
 
 .row6 {
-  height: 700px;
+  /*height: 700px;*/
 }
 
 .row6 .tab {
@@ -191,7 +191,7 @@
 .row6 .tab .item {
   width: 92px;
   height: 92px;
-  margin-bottom: 30px;
+  margin-top: 10px;
   background: url(/img/about/about-circle.png) no-repeat center center;
   background-size: 100% 100%;
   position: relative;
@@ -269,7 +269,7 @@
 
 .row7 .contact {
   padding: 30px 140px 0px 140px;
-  height: 300px;
+  height: 220px;
 }
 
 .row7 .row1 {
@@ -298,7 +298,7 @@ text-align: center;
   display: inline-block;
   height: 16px;
   margin: 8px 20px 8px 0px;
-  border-left: 4px solid #27bdef;
+  /*border-left: 4px solid #27bdef;*/
 }
 
 .contact .img-box {
@@ -309,19 +309,20 @@ text-align: center;
 
 .contact h1 {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 22px;
 }
 
 .contact p {
   font-size: 12px;
-  line-height: 12px;
+  line-height: 16px;
   padding-top: 2px;
   width: 180px;
 }
 
 #map {
   width: 100%;
-  height: 300px;
+  height: 400px;
+  margin-top: 25px;
 }
 
 /*    .content .top {
@@ -402,7 +403,7 @@ text-align: center;
 }
 
 .about-grid {
-  padding-top: 60px;
+  margin-top: 25px;
 }
 .about-grid .left {
   padding-left: 10px;
@@ -414,6 +415,9 @@ text-align: center;
   box-sizing: border-box;
   float: left;
   width: 50%;
+}
+.about-grid .image img {
+  margin-top: 5px;
 }
 .about-grid .title-wrap, .about-grid .image img {
   width: 100%;
