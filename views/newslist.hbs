@@ -19,7 +19,7 @@
   </ul>
 </div>
 
-<script>
+<script type="text/javascript">
 
   function loadNewsList() {
     $.post('/api/headline/headlineList', {
@@ -31,15 +31,15 @@
 //      "pageSize": 15
     }, function (res) {
       if (res.success) {
-        res.body.rows.map(item => {
-          $(`<li >
-            <a href="/newsdetail?id=${item.articleId}">
-              <div class="news-img"><img src="${item.coverPhotoUrl}" alt=""></div>
-              <p class="news-brief ch-font2 font-clamp2"><span>${item.title}</span></p>
-              <p class="date-time ch-font2">${item.gmtCreate}</p>
-            </a>
-          </li>`).appendTo($('#newsList'))
-        })
+        for (var i in res.body.rows) {
+          $('<li>' +
+            '<a href="/newsdetail?id=' + res.body.rows[i].articleId + '">' +
+              '<div class="news-img"><img src="' + res.body.rows[i].coverPhotoUrl + '" alt=""></div>' +
+              '<p class="news-brief ch-font2 font-clamp2"><span>' + res.body.rows[i].title + '</span></p>' +
+              '<p class="date-time ch-font2">'+ res.body.rows[i].gmtCreate + '</p>' +
+            '</a>' +
+          '</li>').appendTo($('#newsList'))
+        }
       }
     });
   }

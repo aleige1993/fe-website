@@ -404,15 +404,15 @@ a:active {
 }
 
 .ice-layout {
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-flex: 1;
-  -webkit-flex: auto;
-  -ms-flex: auto;
-  flex: auto
+  /*display: flex;*/
+  /*-webkit-box-orient: vertical;*/
+  /*-webkit-flex-direction: column;*/
+  /*-ms-flex-direction: column;*/
+  /*flex-direction: column;*/
+  /*-webkit-box-flex: 1;*/
+  /*-webkit-flex: auto;*/
+  /*-ms-flex: auto;*/
+  /*flex: auto*/
 }
 
 .ice-layout-has-aside {
@@ -5370,7 +5370,7 @@ a:active {
   margin-left: 32px;
   font-size: 16px;
   color: #333;
-  line-height: 30px;
+  line-height: 38px;
   max-width: 434px;
   text-indent: 2em;
 }
