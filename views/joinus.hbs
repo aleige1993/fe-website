@@ -206,6 +206,7 @@
             <label><input v-model="submitForm.merchantType" type="radio" name="merchantType" value="2">个人</label>
           </li>
         </ul>
+        <!--<div v-text="submitForm"></div>-->
         <ul>
           <li>
             <span class="form-title">*您所在城市：</span>
@@ -292,21 +293,22 @@
             $('#dialog').show();
           },
           selectProvince() {
+//            console.log(this.$data.provinceIndex);
             if (this.$data.provinceIndex === '') {
-              this.$data.cityIndex = '';
-              this.$data.districtIndex = '';
               this.$data.submitForm.provinceCode = '';
               this.$data.submitForm.provinceName = '';
-              this.$data.submitForm.cityCode = '';
-              this.$data.submitForm.cityName = '';
-              this.$data.submitForm.districtCode = '';
-              this.$data.submitForm.districtName = '';
             } else {
               var item = this.$data.provinceList[this.$data.provinceIndex];
               this.$data.submitForm.provinceCode = item.provinceId;
               this.$data.submitForm.provinceName = item.provinceName;
               this.$data.cityList = item.cityList;
             }
+            this.$data.cityIndex = '';
+            this.$data.districtIndex = '';
+            this.$data.submitForm.cityCode = '';
+            this.$data.submitForm.cityName = '';
+            this.$data.submitForm.districtCode = '';
+            this.$data.submitForm.districtName = '';
           },
           selectCity() {
             if (this.$data.cityIndex === '') {
