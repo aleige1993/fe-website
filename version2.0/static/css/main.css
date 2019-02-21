@@ -547,7 +547,8 @@ h3.page4-title{
 /*.page-4 .download-qrcode.android{*/
   /*background: url("../img/page4/andriod-qrcode.png") center no-repeat;*/
 /*}*/
-.page-4 .download-qrcode.ios{
+.page-4 .download-qrcode.ios
+,.page-4 .download-qrcode.android{
   background: url("../img/page4/ios-qrcode2.png") center no-repeat;
 }
 .page-4 .download-qrcode .image, .page-4 .download-qrcode img{
