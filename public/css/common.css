@@ -117,7 +117,8 @@ button, input, optgroup, select, textarea {
 }
 
 body, html {
-  font-family: Roboto, "Helvetica Neue", Helvetica, Tahoma, Arial, FZLanTingHeiS-L-G, "PingFang SC", "Microsoft YaHei"
+  font-family: Roboto, "Helvetica Neue", Helvetica, Tahoma, Arial, FZLanTingHeiS-L-G, "PingFang SC", "Microsoft YaHei";
+  overflow-x: hidden;
 }
 
 h6, p {
@@ -403,15 +404,15 @@ a:active {
 }
 
 .ice-layout {
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-flex: 1;
-  -webkit-flex: auto;
-  -ms-flex: auto;
-  flex: auto
+  /*display: flex;*/
+  /*-webkit-box-orient: vertical;*/
+  /*-webkit-flex-direction: column;*/
+  /*-ms-flex-direction: column;*/
+  /*flex-direction: column;*/
+  /*-webkit-box-flex: 1;*/
+  /*-webkit-flex: auto;*/
+  /*-ms-flex: auto;*/
+  /*flex: auto*/
 }
 
 .ice-layout-has-aside {
@@ -5254,7 +5255,7 @@ a:active {
 
 .scenario-column h3 {
   font-family: Microsoft YaHei;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 40px;
   color: #999;
@@ -5268,7 +5269,7 @@ a:active {
 
 .scenario-slider .scenario-item {
   width: 112px;
-  height: 158px;
+  height: 128px;
   margin: 0 9px;
   font-size: 0;
   font-family: Microsoft YaHei;
@@ -5325,21 +5326,24 @@ a:active {
 
 .scenario-detail-list {
   position: relative;
-  width: 1240px;
-  margin: 17px auto 0;
+  width: 1140px;
+  margin: 0 auto;
   text-align: left
 }
 
 .scenario-detail-list::before {
-  background: #979797
+  background: transparent;
 }
 
 .scenario-detail-list .scenario-detail-item {
+  box-sizing: border-box;
   position: relative;
   display: none;
   top: 0;
   left: 0;
-  padding-top: 78px
+  height: 490px;
+  padding-top: 30px;
+  /*overflow: hidden;*/
 }
 
 .scenario-detail-list .scenario-detail-item.selected {
@@ -5348,7 +5352,7 @@ a:active {
 
 .scenario-detail-list .scenario-detail-item .scenario-detail-left {
   font-family: Microsoft YaHei;
-  padding-left: 13px;
+  /*padding-left: 13px;*/
   padding-bottom: 12px;
   width: 570px
 }
@@ -5363,10 +5367,12 @@ a:active {
 }
 
 .scenario-detail-list .scenario-detail-item .scenario-detail-left > p {
-  font-size: 12px;
+  margin-left: 32px;
+  font-size: 16px;
   color: #333;
-  line-height: 22px;
-  max-width: 434px
+  line-height: 38px;
+  max-width: 434px;
+  text-indent: 2em;
 }
 
 .scenario-detail-list .scenario-detail-item .scenario-detail-left .scenario-ability-list .ability-title {
@@ -5449,16 +5455,44 @@ a:active {
 .scenario-detail-list .scenario-detail-item .scenario-detail-right {
   width: 720px;
   position: absolute;
-  top: 0;
   bottom: 0;
-  left: 570px;
-  overflow: hidden
+  right: 0;
+  overflow: hidden;
+  text-align: right;
 }
 
 .scenario-detail-list .scenario-detail-item .scenario-detail-right > img {
   width: 100%;
+  /*position: absolute;*/
+  /*bottom: 0*/
+}
+
+.scenario-download, .scenario-download * {
+  vertical-align: bottom;
+}
+
+.scenario-download {
   position: absolute;
-  bottom: 0
+  left: 0;
+  bottom: 0;
+}
+
+.scenario-download  a{
+  display: inline-block;
+  margin-right: 10px;
+  padding: 12px 56px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid #108ee9;
+  text-decoration: none;
+}
+
+.scenario-download img {
+  width: 140px;
+  height: 140px;
+  display: none;
 }
 
 .scenario-actions {
@@ -5498,7 +5532,7 @@ a:active {
   max-width: 1920px;
   min-width: 1280px;
   margin: 0 auto;
-  height: 400px
+  height: 400px;
 }
 
 .hy-friends-list * {
@@ -5508,7 +5542,7 @@ a:active {
 
 .hy-friends-list .hy-friends-item {
   position: relative;
-  width: 12.5%;
+  width: 20%;
   height: 100%;
   float: left;
   overflow: hidden;
@@ -5583,7 +5617,7 @@ a:active {
 }
 
 .hy-friends-list .hy-friends-item.selected {
-  width: 62.5%
+  width: 60%
 }
 
 .hy-friends-list .hy-friends-item.selected::before {
@@ -6247,19 +6281,25 @@ body, html {
   top: 40px;
   display: none;
 }
+.common-header .menu .next-icon {
+  margin-left: 1px;
+}
 .common-header-wrap.fixed {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 99;
+  height: 120px;
+  background: url("/img/header-mask.png") repeat-x;
 }
 .common-header-wrap.fixed .common-header .menu li > a {
+  font-size: 16px;
   color: #fff;
 }
 
 .swiper-container, .swiper-slide img{
   width: 100%;
-  height: 450px;
+  /*height: 450px;*/
 }
 .swiper-slide {
   text-align: center;

@@ -9,6 +9,12 @@
   overflow: hidden;
 }
 
+.title-wrap {
+  margin-top: 25px;
+  padding-top: 0;
+  height: 100px;
+}
+
 a.supply-join {
   text-align: center;
   display: inline-block;
@@ -49,7 +55,7 @@ a.supply-join {
 }
 
 .section2 {
-  padding-bottom: 30px;
+  /*padding-bottom: 30px;*/
 }
 
 .section2 dl {
@@ -64,14 +70,23 @@ a.supply-join {
 }
 
 .section2 dd {
+  margin-bottom: 10px;
   font-size: 14px;
   color: #828282;
   line-height: 30px;
 }
 
 .section2 dl i {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  border-radius: 22px;
+  border: 1px solid #009eff;
   font-style: normal;
   color: #009eff;
+  margin-right: 5px;
+  text-align: center;
 }
 
 .section3 {
@@ -93,6 +108,7 @@ a.supply-join {
 
 .section3 li .wraper {
   box-sizing: border-box;
+  height: 310px;
   margin: 0 10px;
   padding: 20px;
   background-color: #fff;
@@ -169,10 +185,11 @@ a.supply-join {
 .section5 {
   /*background-color: #f6f6f6;*/
   text-align: center;
-  padding-bottom: 150px;
+  padding-bottom: 30px;
 }
 
 .section5 img {
-  width: 90%;
+  display: block;
+  width: 100%;
   padding-bottom: 20px;
 }
